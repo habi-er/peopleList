@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="con-box">
+        <p class="btn">
+          <button class="all-del">명단 삭제</button>
+          <button class="all-reset">명단 보기</button>
+        </p>
+        <div class="people-list">
+          <!-- <ul class="people">
+            <li class="img"><img src="image/hijab-3064633_640.jpg" alt=""></li>
+            <li class="info">
+              <p class="name">홍길동</p>
+              <p class="job">웹퍼블리셔</p>
+              <p class="tel">010-0000-1111</p>
+            </li>
+            <li class="Favorites"><i class="xi-star"></i></li>
+          </ul> -->
+        </div>
+      </div>
+    </div>
+    <script>
+      const allDelBtn = document.querySelector(".all-del");
+      const allResetBtn = document.querySelector(".all-reset");
+      const peopleList = document.querySelector(".people-list");
+      let isfavorite = true;
+      const peopleObj = [
+        {
+          id: 1,
+          name: "아놀드",
+          job: "웹퍼블리셔",
+          tel: "010-2232-8832",
+          imgurl: "images/image0.jpg",
+          favorite: isfavorite,
+        },
+        {
+          id: 2,
+          name: "크리스 범스테드",
+          job: "프론트엔드 개발자",
+          tel: "010-2232-8832",
+          imgurl: "images/image1.jpg",
+          favorite: isfavorite,
+        },
+        {
+          id: 3,
+          name: "마샤딕",
+          job: "백엔드 개발자",
+          tel: "010-2232-8832",
+          imgurl: "images/image2.jpg",
+          favorite: isfavorite,
+        },
+        {
+          id: 4,
+          name: "다니엘 데이 루이스",
+          job: "DB관리자",
+          tel: "010-2232-8832",
+          imgurl: "images/image3.jpg",
+          favorite: isfavorite,
+        },
+        {
+          id: 5,
+          name: "하비에르 바르뎀",
+          job: "보안 개발자",
+          tel: "010-2232-8832",
+          imgurl: "images/image4.jpg",
+          favorite: isfavorite,
+        },
+        {
+          id: 6,
+          name: "아놀드",
+          job: "웹퍼블리셔",
+          tel: "010-2232-8832",
+          imgurl: "images/image5.jpg",
+          favorite: isfavorite,
+        },
+      ];
+
+      const makeList = () => {
+        const newObj = peopleObj.map(people => {
+          let { imgurl, name, job, tel, favorite } = people;
+          if (people.favorite) {
+            favorite = "xi-star";
+          } else {
+            favorite = "xi-star-o";
+          }
+          peopleList.innerHTML += `
+        <ul class="people">
+            <li class="img"><img src="${imgurl}" alt=${name}></li>
+            <li class="info">
+              <p class="name">${name}</p>
+              <p class="job">${job}</p>
+              <p class="tel">${tel}</p>
+            </li>
+            <li class="Favorites"><i class=${favorite}></i></li>
+          </ul>
+        `;
+          const Favorites = document.querySelectorAll(".Favorites i");
+          Favorites.forEach(star => {
+            star.addEventListener("click", e => {
+              if (e.currentTarget.classList.contains("xi-star")) {
+                e.currentTarget.classList.replace("xi-star", "xi-star-o");
+              } else {
+                e.currentTarget.classList.replace("xi-star-o", "xi-star");
+              }
+            });
+          });
+        });
+      };
+      makeList();
+      allDelBtn.addEventListener("click", () => {
+        peopleList.innerHTML = "";
+      });
+      allResetBtn.addEventListener("click", () => {
+        peopleList.innerHTML = "";
+        makeList();
+      });
+    </script>
+  </body>
+</html>
