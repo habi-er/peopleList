@@ -174,11 +174,14 @@ body #wrap .show-add-box .employee-add-box form table tbody tr td .w350 {
   box-sizing: border-box;
   padding-left: 10px;
 }
-body #wrap .show-add-box .employee-add-box .add {
+body #wrap .show-add-box .employee-add-box form table tbody tr td input {
+  border: 1px solid #000;
+}
+body #wrap .show-add-box .add {
   text-align: center;
   margin-bottom: 20px;
 }
-body #wrap .show-add-box .employee-add-box .add .addBtn {
+body #wrap .show-add-box .add .addBtn {
   cursor: pointer;
   width: 100px;
   height: 35px;
@@ -186,15 +189,15 @@ body #wrap .show-add-box .employee-add-box .add .addBtn {
   background: #d5ecfc;
   transition: 0.5s;
 }
-body #wrap .show-add-box .employee-add-box .add .addBtn:hover {
+body #wrap .show-add-box .add .addBtn:hover {
   background: #95d2fe;
 }
-body #wrap .show-add-box .employee-add-box .gallery {
+body #wrap .show-add-box .gallery {
   width: 550px;
   display: flex;
   flex-wrap: wrap;
 }
-body #wrap .show-add-box .employee-add-box .gallery button {
+body #wrap .show-add-box .gallery button {
   cursor: pointer;
   width: 100px;
   height: 100px;
@@ -202,13 +205,13 @@ body #wrap .show-add-box .employee-add-box .gallery button {
   border: none;
   margin: 5px;
 }
-body #wrap .show-add-box .employee-add-box .gallery button img {
+body #wrap .show-add-box .gallery button img {
   width: 100px;
   height: 100px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-body #wrap .show-add-box .employee-add-box .suc-msg {
+body #wrap .show-add-box .suc-msg {
   position: absolute;
   left: 50%;
   top: 30%;
@@ -225,14 +228,14 @@ body #wrap .show-add-box .employee-add-box .suc-msg {
   z-index: -1;
   opacity: 0;
 }
-body #wrap .show-add-box .employee-add-box .suc-msg.on {
+body #wrap .show-add-box .suc-msg.on {
   z-index: 0;
   opacity: 1;
 }
-body #wrap .show-add-box p {
+body #wrap p {
   text-indent: 10px;
 }
-body #wrap .show-add-box .add-box-close {
+body #wrap .add-box-close {
   position: absolute;
   right: 30px;
   top: 30px;
@@ -240,10 +243,10 @@ body #wrap .show-add-box .add-box-close {
   border: none;
   cursor: pointer;
 }
-body #wrap .show-add-box .add-box-close i {
+body #wrap .add-box-close i {
   font-size: 40px;
 }
-body #wrap .show-add-box .add-box-close:hover i {
+body #wrap .add-box-close:hover i {
   color: #95d2fe;
 }
 /*# sourceMappingURL=style.css.map */
