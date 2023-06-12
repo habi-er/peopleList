@@ -1,6 +1,6 @@
 export default class PeopleList {
   newData = JSON.parse(localStorage.getItem("newData")) || [];
-  no = JSON.parse(localStorage.getItem("no")) || 7;
+  no = JSON.parse(localStorage.getItem("no")) || 6;
   constructor(
     forBg,
     allDel,
