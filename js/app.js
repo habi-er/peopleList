@@ -1,13 +1,15 @@
 import { data } from "../module2/data.js";
 import { get, getAll } from "../module2/getEle.js";
 import PeopleList from "../module2/peopleList.js";
-
 // localStorage.clear();
-if (localStorage.getItem("no") === 7) {
+
+let no = JSON.parse(localStorage.getItem("no")) || 6;
+if (no === 6) {
+  no = 7;
   let newData = JSON.stringify(data);
   localStorage.setItem("newData", newData);
+  localStorage.setItem("no", JSON.stringify(no));
 }
-
 const forBg = get(".for-bg"),
   allDel = get(".btn .all-del"),
   allRe = get(".btn .all-reset"),
