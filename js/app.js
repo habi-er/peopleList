@@ -1,7 +1,7 @@
 import { data } from "../module2/data.js";
 import { get, getAll } from "../module2/getEle.js";
 import PeopleList from "../module2/peopleList.js";
-
+localStorage.clear();
 let no = JSON.parse(localStorage.getItem("no")) || 6;
 if (no === 6) {
   no = 7;
