@@ -1,0 +1,262 @@
+body {
+  background: #e9fbff;
+  #wrap {
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    .add-box-button {
+      line-height: 40px;
+      text-align: center;
+      width: 150px;
+      height: 40px;
+      position: fixed;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      border: 1px solid #79c9fe;
+      border-radius: 20px;
+      cursor: pointer;
+      background: #d5ecfc;
+      font-size: 14px;
+      &:hover {
+        background: #95d2fe;
+      }
+    }
+    .for-bg {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      left: 0;
+      top: 0;
+      display: none;
+      transition: 1s;
+      background: #fff;
+      z-index: 10;
+      &.on {
+        display: block;
+        background: rgba(0, 0, 0, 0.5);
+      }
+    }
+    .employee-list-box {
+      background: #fff;
+      width: 400px;
+      margin: 50px auto;
+      box-sizing: border-box;
+      border: 1px solid #000;
+      border-radius: 30px;
+      box-shadow: 1px 1px 8px #000;
+      .btn {
+        text-align: center;
+        margin-bottom: 40px;
+        margin-top: 40px;
+        button {
+          font-weight: 500;
+          font-size: 18px;
+          color: #fff;
+          cursor: pointer;
+          width: 150px;
+          height: 50px;
+          background: rgb(208, 236, 255);
+          background: linear-gradient(45deg, rgba(208, 236, 255, 1) 0%, rgba(0, 153, 255, 1) 100%);
+          border: 1px solid #8ed1fe;
+          border-radius: 20px;
+          &:hover {
+            background: rgb(208, 236, 255);
+            background: linear-gradient(45deg, rgba(0, 153, 255, 1) 0%, rgba(208, 236, 255, 1) 100%);
+          }
+        }
+        .all-del {
+          margin-right: 20px;
+        }
+      }
+      .employee-list {
+        padding: 0 20px;
+        box-sizing: border-box;
+        .people {
+          position: relative;
+          padding: 0 20px;
+          box-sizing: border-box;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          height: 100px;
+          margin-bottom: 15px;
+          border: 1px solid #000;
+          border-radius: 30px;
+          box-shadow: 1px 1px 3px #000;
+          background: rgb(255, 255, 255);
+          background: linear-gradient(45deg, rgba(255, 255, 255, 1) 0%, rgba(125, 203, 255, 1) 100%);
+          img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+          }
+          .info {
+            font-size: 14px;
+            width: 180px;
+            strong {
+              font-weight: 500;
+              display: block;
+              line-height: 2;
+            }
+          }
+          .favorites {
+            i {
+              font-size: 36px;
+              color: #ffdd00;
+              cursor: pointer;
+            }
+          }
+          .delBtn {
+            position: absolute;
+            right: 15px;
+            bottom: 5px;
+            background: transparent;
+            border: 3px solid rgb(255, 137, 117);
+            border-radius: 10px;
+            color: rgb(255, 137, 117);
+            font-weight: 600;
+            &:hover {
+              border-color: red;
+              color: red;
+            }
+          }
+        }
+      }
+    }
+
+    .show-add-box {
+      z-index: 20;
+      width: 700px;
+      background: #fff;
+      position: fixed;
+      right: -100%;
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 30px 0 0 30px;
+      padding: 0 100px;
+      box-sizing: border-box;
+      transition: 0.4s;
+      border: 3px solid #000;
+      border-right: none;
+      &.on {
+        right: 0;
+      }
+      .employee-add-box {
+        margin: 50px auto;
+        h2 {
+          font-size: 36px;
+          font-weight: 700;
+          text-align: center;
+          margin-top: 40px;
+          margin-bottom: 40px;
+        }
+        form {
+          text-align: center;
+          margin-bottom: 20px;
+
+          table {
+            .w1 {
+              width: 100px;
+            }
+            .w2 {
+              width: auto;
+            }
+            tbody {
+              tr {
+                height: 40px;
+                th {
+                  font-size: 18px;
+                }
+                td {
+                  .w350 {
+                    width: 350px;
+                    height: 30px;
+                    box-sizing: border-box;
+                    padding-left: 10px;
+                  }
+                  input {
+                    border: 1px solid #000;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .add {
+        text-align: center;
+        margin-bottom: 20px;
+        .addBtn {
+          cursor: pointer;
+          width: 100px;
+          height: 35px;
+          border: 1px solid #79c9fe;
+          background: #d5ecfc;
+          transition: 0.5s;
+          &:hover {
+            background: #95d2fe;
+          }
+        }
+      }
+      .gallery {
+        width: 550px;
+        display: flex;
+        flex-wrap: wrap;
+        button {
+          cursor: pointer;
+          width: 100px;
+          height: 100px;
+          background: transparent;
+          border: none;
+          margin: 5px;
+          img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+          }
+        }
+      }
+      .suc-msg {
+        position: absolute;
+        left: 50%;
+        top: 30%;
+        transform: translate(-50%, -30%);
+        font-size: 22px;
+        width: 270px;
+        height: 70px;
+        border: 3px solid #95d2fe;
+        border-radius: 50px;
+        text-align: center;
+        line-height: 70px;
+        background: #fff;
+        transition: 0.7s;
+        z-index: -1;
+        opacity: 0;
+        &.on {
+          z-index: 0;
+          opacity: 1;
+        }
+      }
+    }
+    p {
+      text-indent: 10px;
+    }
+    .add-box-close {
+      position: absolute;
+      right: 30px;
+      top: 30px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      i {
+        font-size: 40px;
+      }
+      &:hover {
+        i {
+          color: #95d2fe;
+        }
+      }
+    }
+  }
+}
